@@ -7,11 +7,7 @@ import { LiveChat } from "./LiveChat";
 import { CommandBar } from "./CommandBar";
 import { AIAssistantPanel } from "./AIAssistantPanel";
 import { TorrensShellIcon } from "./TorrensShellIcon";
-import torrensLogo from 'figma:asset/ef4d2891eec1e0481744f86101433476021ce26c.png';
-import torrensLogoFull from '../../image-21.png';
 import brandingBanner from '../../image-29.png';
-import torrensShell from '../../assets/c4d493c87c3ef43fc72250fa5ac980042d53ce9e.png';
-import cabriniLogo from '../../cabrini-logo-transparent.png';
 import { toast } from "sonner";
 import { Toaster } from "./ui/sonner";
 import { mockProviders, mockProviderContractors, mockStaff } from "../data/mockData";
@@ -337,7 +333,7 @@ export function RootLayout() {
               <MapPin className="h-3.5 w-3.5 text-[#1565C0]" />
               <div>
                 <div className="text-[13px] font-medium text-[#1A2B3C] leading-tight">{selectedLocation}</div>
-                <div className="text-[11px] text-white/35">Emergency Dept · Today</div>
+                <div className="text-[11px] text-[#64748B]">Emergency Dept · Today</div>
               </div>
             </div>
           </div>
@@ -523,8 +519,8 @@ export function RootLayout() {
                       ) : (
                         <>
                           <div className="flex items-center gap-3 px-3 py-2 mb-0.5">
-                            <Icon className="h-[18px] w-[18px] text-white/35" />
-                            <span className="text-[13px] font-semibold text-white/35">{item.name}</span>
+                            <Icon className="h-[18px] w-[18px] text-[#9CA3AF]" />
+                            <span className="text-[13px] font-semibold text-[#6B7280]">{item.name}</span>
                           </div>
                           <div className="ml-3 space-y-0.5 pl-3 border-l border-[rgba(26,43,60,0.10)]">
                             {item.children.map((child: any) => {
@@ -564,7 +560,7 @@ export function RootLayout() {
           ))}
 
           {/* Torrens Health footer */}
-          <div className="mt-4 mx-1 rounded-xl overflow-hidden border border-white/[0.10]">
+          <div className="mt-4 mx-1 rounded-xl overflow-hidden border border-[#E5E7EB] bg-white shadow-sm">
             {/* Branding banner — image-27 */}
             <div className="h-[72px] overflow-hidden">
               <img src={brandingBanner} alt="Torrens Health" className="w-full h-full object-cover object-left-top" />
