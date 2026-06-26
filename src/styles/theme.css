@@ -1,0 +1,269 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --font-family: 'Inter', sans-serif;
+  /* NurseForce — image-28 palette: light bg, rich blue, dark sidebar */
+  --background: #F3F6FA;
+  --foreground: #111827;
+  --card: #FFFFFF;
+  --card-foreground: #111827;
+  --popover: #FFFFFF;
+  --popover-foreground: #111827;
+  --primary: #4263EB;
+  --primary-foreground: #ffffff;
+  --secondary: #EFF6FF;
+  --secondary-foreground: #4263EB;
+  --muted: #F1F5F9;
+  --muted-foreground: #6B7280;
+  --accent: #EFF6FF;
+  --accent-foreground: #4263EB;
+  --destructive: #DC2626;
+  --destructive-foreground: #ffffff;
+  --border: rgba(17, 24, 39, 0.09);
+  --input: transparent;
+  --input-background: #F1F5F9;
+  --switch-background: #94A3B8;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #4263EB;
+  --chart-1: #4263EB;
+  --chart-2: #10B981;
+  --chart-3: #F59E0B;
+  --chart-4: #6366F1;
+  --chart-5: #EF4444;
+  --radius: 0.75rem;
+  /* Sidebar — deep navy #0C1B35 */
+  --sidebar: #1B2A85;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #4263EB;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #2A3B9E;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(255, 255, 255, 0.07);
+  --sidebar-ring: #4263EB;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+
+  /* Leaflet map marker fixes */
+  .leaflet-container {
+    font-family: inherit;
+  }
+
+  .leaflet-popup-content-wrapper {
+    border-radius: 0.5rem;
+  }
+
+  .custom-marker,
+  .custom-facility-marker,
+  .apple-map-pin {
+    background: none;
+    border: none;
+  }
+
+  /* Apple-style map pin animation */
+  .apple-map-pin svg {
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+  }
+
+  .apple-map-pin:hover svg {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Mobile optimizations */
+  @media (max-width: 640px) {
+    html {
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  }
+  
+  /* Ensure touch targets are at least 44x44px */
+  button, a, input[type="button"], input[type="submit"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* ── Hide number input spinners globally ── */
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  /* ── Scrollbar styling ── */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(27,53,105,0.15) transparent;
+  }
+  *::-webkit-scrollbar { width: 5px; height: 5px; }
+  *::-webkit-scrollbar-track { background: transparent; }
+  *::-webkit-scrollbar-thumb { background: rgba(27,53,105,0.15); border-radius: 9999px; }
+  *::-webkit-scrollbar-thumb:hover { background: rgba(27,53,105,0.25); }
+
+  /* ── Sidebar scrollbar (light on dark) ── */
+  aside *::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); }
+  aside *::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.25); }
+
+  /* ── Card elevation ── */
+  .card-elevated {
+    box-shadow: 0 1px 3px rgba(26,22,20,0.06), 0 1px 2px rgba(26,22,20,0.04);
+    transition: box-shadow 0.18s ease;
+  }
+  .card-elevated:hover {
+    box-shadow: 0 4px 12px rgba(26,22,20,0.09), 0 1px 3px rgba(26,22,20,0.06);
+  }
+
+  /* ── Smooth selection colour ── */
+  ::selection {
+    background: rgba(211,47,47,0.18);
+    color: #1A1614;
+  }
+}
