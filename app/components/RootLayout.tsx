@@ -1,37 +1,6 @@
 import { useState } from "react";
 import { Link, Outlet, useLocation, useNavigate } from "react-router";
-import {
-  LayoutDashboard,
-  Calendar,
-  Users,
-  Building2,
-  ClipboardCheck,
-  MapPin,
-  ShieldCheck,
-  DollarSign,
-  BarChart3,
-  Cog,
-  Shield,
-  Menu,
-  Search,
-  Bell,
-  Settings,
-  ChevronDown,
-  LogOut,
-  AlertCircle,
-  CheckCircle,
-  UserCircle,
-  UserCog,
-  Sparkles,
-  Clock,
-  XCircle,
-  FileText,
-  TrendingUp,
-  X,
-  MessageSquare,
-  Zap,
-  CalendarDays
-} from "lucide-react";
+import { LayoutDashboard, Calendar, Users, Building2, ClipboardCheck, MapPin, ShieldCheck, DollarSign, ChartBar as BarChart3, Cog, Shield, Menu, Search, Bell, Settings, ChevronDown, LogOut, CircleAlert as AlertCircle, CircleCheck as CheckCircle, CircleUser as UserCircle, UserCog, Sparkles, Clock, Circle as XCircle, FileText, TrendingUp, X, MessageSquare, Zap, CalendarDays } from "lucide-react";
 import { Button } from "./ui/button";
 import { AIAssistant } from "./AIAssistant";
 import { LiveChat } from "./LiveChat";
@@ -39,10 +8,10 @@ import { CommandBar } from "./CommandBar";
 import { AIAssistantPanel } from "./AIAssistantPanel";
 import { TorrensShellIcon } from "./TorrensShellIcon";
 import torrensLogo from 'figma:asset/ef4d2891eec1e0481744f86101433476021ce26c.png';
-import torrensLogoFull from '../../imports/image-21.png';
-import brandingBanner from '../../imports/image-27.png';
-import torrensShell from 'figma:asset/c4d493c87c3ef43fc72250fa5ac980042d53ce9e.png';
-import cabriniLogo from '../../imports/cabrini-logo-transparent.png';
+import torrensLogoFull from '../../image-21.png';
+import brandingBanner from '../../image-29.png';
+import torrensShell from '../../assets/c4d493c87c3ef43fc72250fa5ac980042d53ce9e.png';
+import cabriniLogo from '../../cabrini-logo-transparent.png';
 import { toast } from "sonner";
 import { Toaster } from "./ui/sonner";
 import { mockProviders, mockProviderContractors, mockStaff } from "../data/mockData";
